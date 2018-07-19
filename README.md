@@ -10,22 +10,17 @@ Maven is used for Project Management. The pom.xml file will contain all the depe
 
 <h2>Prerequisites</h2>
 <li>
-<ul>
-Java 8
-Maven 3
-Postgres 9.3
-</ul>
+<ul>Java8</ul>
+<ul>Maven 3</ul>
+<ul>Postgres 9.3</ul>
 </li>
 
 <h2>Build tasks</h2>
 <li>
-<ul>
-Running test mvn test
+<ul> Running test mvn test </ul>
 
-Compile project / generate code coverage report / make war mvn clean package
+<ul>Compile project / generate code coverage report / make war mvn clean package </ul>
 
-Running server mvn tomcat7:run
-
-Applying migrations mvn clean compile flyway:migrate
-</ul>
+<ul>Running server mvn tomcat7:run</ul>
+<ul>Applying migrations mvn clean compile flyway:migrate</ul>
 </li>
