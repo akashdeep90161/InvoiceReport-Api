@@ -9,18 +9,22 @@ The project is written in Java 8.
 Maven is used for Project Management. The pom.xml file will contain all the dependencies needed for the project as well as other configuration details.
 
 <h2>Prerequisites</h2>
-<li>
-<ul>Java8</ul>
-<ul>Maven 3</ul>
-<ul>Postgres 9.3</ul>
-</li>
+<ul>
+<li>Java8</li>
+<li>Maven 3</li>
+<li>Postgres 9.3</li>
+</ul>
 
 <h2>Build tasks</h2>
+<ul>
 <li>
-<ul> Running test mvn test </ul>
+ <dl> <dt>Running test</dt>
+   <dd>mvn test </dd>
+ </dl>
+ </li>
 
-<ul>Compile project / generate code coverage report / make war mvn clean package </ul>
+<li>Compile project / generate code coverage report / make war mvn clean package </li>
 
-<ul>Running server mvn tomcat7:run</ul>
-<ul>Applying migrations mvn clean compile flyway:migrate</ul>
-</li>
+<li>Running server mvn tomcat7:run</li>
+<li>Applying migrations mvn clean compile flyway:migrate</li>
+</ul>
