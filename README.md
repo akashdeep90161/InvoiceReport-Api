@@ -18,13 +18,12 @@ Maven is used for Project Management. The pom.xml file will contain all the depe
 <h2>Build tasks</h2>
 <ul>
 <li>
- <dl> <dt>Running test</dt>
-   <dd>mvn test </dd>
+ <dl> <dt>Running test</dt><dd>mvn test </dd>
  </dl>
  </li>
 
-<li>Compile project / generate code coverage report / make war mvn clean package </li>
+<li><dl> <dt>Compile project / generate code coverage report / make war</dt> <dd> mvn clean package</dd> </dl></li>
 
-<li>Running server mvn tomcat7:run</li>
-<li>Applying migrations mvn clean compile flyway:migrate</li>
+<li> <dl> <dt>Running server </dt> <dd>mvn tomcat7:run </dd> </dl></li>
+<li><dl> <dt> Applying migrations </dt> <dd> mvn clean compile flyway:migrate </dd> </dl></li>
 </ul>
