@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration monitorInterval="30" packages="org.apache.logging.log4j.core">
+    <Properties>
+        <Property name="path">/tmp/logs</Property>
+        <property name="pattern">%d{yyyy-MM-dd HH:mm:ss.SSS} [%-5level] [%t] %c{1}:%L - %msg%n</property>
+    </Properties>
+    <Appenders>
+        <Console name="Console-Appender" target="SYSTEM_OUT">
+            <ThresholdFilter level="ERROR" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout>
+                <pattern>${pattern}</pattern>
+            </PatternLayout>
+        </Console>
+        <RollingFile name="user-logs" fileName="${path}/log4j2-user.log"
+                     filePattern="${path}/log4j2-user-%d{yyyyMMdd}.log.gz">
+            <PatternLayout>
+                <pattern>${pattern}</pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+            </Policies>
+            <DefaultRolloverStrategy max="30"/>
+            --> <!-- Keeps maximum of 30 files.-->
+        </RollingFile>
+        <RollingFile name="rolling-user-logs" fileName="${path}/log4j2-root-user.log"
+                     filePattern="${path}/log4j2-root-user-%d{yyyyMMdd}.log.gz">
+            <PatternLayout>
+                <pattern>${pattern}</pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+            </Policies>
+            <DefaultRolloverStrategy max="30"/>
+            -->  <!-- Keeps maximum of 30 files.-->
+        </RollingFile>
+    </Appenders>
+    <Loggers>
+        <Root level="WARN">
+            <AppenderRef ref="rolling-user-logs"/>
+            <AppenderRef ref="Console-Appender"/>
+        </Root>
+        <Logger name="com.walkover.user.api" level="DEBUG" additivity="false">
+            <AppenderRef ref="user-logs"/>
+        </Logger>
+    </Loggers>
+</Configuration>
