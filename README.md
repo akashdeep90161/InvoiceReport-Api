@@ -1,7 +1,7 @@
 # InvoiceReport-Api
 
 <h2>Introduction</h2>
-InvoiceReport will help for Shopkeeper in creating Invoce for Customers. The project will contain the backend code and APIs for Invoice Report.
+InvoiceReport will help for shopkeeper in creating Invoice for Customers. The project will contain the backend code and APIs for Invoice Report.
 
 <h2>Project details and setup</h2>
 The project is written in Java 8.
